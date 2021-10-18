@@ -14,7 +14,7 @@ function startTeam() {
         {
             name:'question',
             type: 'list',
-            choices: ['Add a Engineer', 'Add a Intern','Add a Manager', 'Make HTML']
+            choices: ['Add a Engineer', 'Add a Intern', 'Make HTML']
         }
     ])
     .then(answers => {
@@ -25,9 +25,6 @@ function startTeam() {
             case 'Add a Intern':
                 addIntern();
                 break;
-            case 'Add a Manager':
-                addManager();
-                break;
             default: fs.writeFileSync('index.html',generateTeam(team));
                 break;
         }
@@ -36,22 +33,22 @@ function startTeam() {
 function addEngineer() {
     inquirer.prompt([{
         name: 'name',
-        message: 'What is your name?',
+        message: 'What is their name?',
         type:'input'
     },
     {
         name: 'id',
-        message: 'What is your id?',
+        message: 'What is their id?',
         type:'number'
     },
     {
         name: 'email',
-        message: 'What is your email?',
+        message: 'What is their email?',
         type:'input'
     },
     {
         name: 'github',
-        message: 'What is your GitHub username?',
+        message: 'What is their GitHub username?',
         type:'input'
     },
     ])
@@ -65,22 +62,22 @@ function addEngineer() {
 function addIntern() {
     inquirer.prompt([{
         name: 'name',
-        message: 'What is your name?',
+        message: 'What is their name?',
         type:'input'
     },
     {
         name: 'id',
-        message: 'What is your id?',
+        message: 'What is their id?',
         type:'number'
     },
     {
         name: 'email',
-        message: 'What is your email?',
+        message: 'What is their email?',
         type:'input'
     },
     {
         name: 'school',
-        message: 'What is your school name?',
+        message: 'What is their school name?',
         type:'input'
     },
     ])
@@ -94,22 +91,22 @@ function addIntern() {
 function addManager() {
     inquirer.prompt([{
         name: 'name',
-        message: 'What is your name?',
+        message: 'What is your manager name?',
         type:'input'
     },
     {
         name: 'id',
-        message: 'What is your id?',
+        message: 'What is their id?',
         type:'number'
     },
     {
         name: 'email',
-        message: 'What is your email?',
+        message: 'What is their email?',
         type:'input'
     },
     {
         name: 'office',
-        message: 'What is your Office Number?',
+        message: 'What is their office number?',
         type:'number'
     },
     ])
@@ -122,4 +119,4 @@ function addManager() {
 
 
 
-startTeam()
+addManager();
